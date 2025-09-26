@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import HeroSection from './components/herosection/herosection'
+import HeroSection from './components/pages/herosection/herosection'
 import Navbar from './components/Layout/Navbar'
 import Noise from './components/styles/Noise/Noise'
 
