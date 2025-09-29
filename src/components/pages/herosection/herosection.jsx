@@ -5,6 +5,7 @@ import Lenis from '@studio-freight/lenis';
 import { GoArrowDownRight } from "react-icons/go";
 import CircularText from '../../styles/CircularText/CircularText'
 import HeroText from '../HeroText/HeroText';
+import backgroundImage from '../../../assets/094.png'
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -69,18 +70,28 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div>
-      {/* Hero Section */}
+    <div  >
       <div
-        ref={experienceRef}
-        className="relative w-full h-screen overflow-hidden bg-gray-500  "
-      >
+
+>
+      {/* Hero Section */}
+     <div
+  ref={experienceRef}
+  className="relative w-full h-screen overflow-hidden bg-[#D1533A] "
+  style={{
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
+    // backgroundPosition: "center",
+    backgroundBlendMode: "multiply", // blends color with image
+  }}
+>
         {/* Centered main content */}
-        <div className=" absolute inset-0  flex flex-col  md:gap-25 gap-8 text-right items-center justify-center w-full">
+        <div className=" absolute inset-0  flex flex-col  md:gap-25 gap-8 text-right items-center justify-center w-full ">
           <h1
             ref={middleTextRef}
             className="font-black whitespace-nowrap select-none tracking-tight transform origin-center 
-                  font-mulish bg-[linear-gradient(45deg,#f0d1d6,#db98a3,#b86981,#7a4959,#3d252c,#5d0223,#8b0a3a,#b86981,#db98a3,#f0d1d6)]
+                  font-mulish bg-[#F0E0CC]
                   bg-[length:300%_300%] bg-clip-text text-transparent animate-waveGradient text-[clamp(3rem,12vw,14rem)]"
           >
             HARSH BARMAN
@@ -97,9 +108,10 @@ const HeroSection = () => {
             text=" * SCROLL TO DISCOVER * SCROLL TO DISCOVER"
             onHover="speedUp"
             spinDuration={20}
-            className="absolute md:bottom-10 md:left-10 bottom-3 left-3"
+            className="absolute md:bottom-20 md:left-10 bottom-3 left-3"
           />
         </div>
+      </div>
       </div>
 
       {/* Next section for scroll effect */}
