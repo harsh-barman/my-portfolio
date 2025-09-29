@@ -36,12 +36,12 @@ const ScrollCardStack = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" >
       {/* Top spacer */}
       <div style={{ height: '20vh' }} />
       
       {/* Cards container */}
-      <div className="w-full max-w-7xl mx-auto relative">
+      <div className="w-full max-w-8xl mx-auto">
         {cardData.map((card, index) => (
           <div
             key={card.id}
@@ -51,13 +51,6 @@ const ScrollCardStack = () => {
               zIndex: index + 1
             }}
           >
-            {/* Vertical Text - only for first card */}
-            {index === 0 && (
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full -ml-4 [writing-mode:vertical-rl] text-gray-700 text-lg font-bold z-50">
-                RECENT WORK
-              </div>
-            )}
-            
             <div className="bg-white rounded-2xl flex overflow-hidden shadow-2xl mx-4">
               <div className="w-2/5 flex-shrink-0 flex md:w-2/5">
                 <img
@@ -92,11 +85,6 @@ const ScrollCardStack = () => {
           }
           .sticky img {
             aspect-ratio: 16 / 9;
-          }
-          
-          /* Hide vertical text on mobile */
-          .absolute {
-            display: none;
           }
         }
       `}</style>

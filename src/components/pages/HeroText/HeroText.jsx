@@ -2,15 +2,9 @@ import React from 'react';
 import LearnMore from '../../styles/buttons/LearnMore/LearnMore';
 import ScrollStack from '../../styles/ScrollStack/ScrollStack';
 
-
-
 export default function HeroText({ className }) {
   return (
-    
     <div className={`relative w-full flex flex-col items-center  ${className}`}>
-      
-   
-        
       <div className=" text-left md:pl-25">
         <div className="w-full md:w-[70%]">
           <p className=" text-[2.4rem] text-[#b7aaaa]">
