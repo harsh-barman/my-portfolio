@@ -2,12 +2,14 @@ import React from 'react';
 import LearnMore from '../../styles/buttons/LearnMore/LearnMore';
 import ScrollStack from '../../styles/ScrollStack/ScrollStack';
 
+
 export default function HeroText({ className }) {
   return (
     <div className={`relative w-full flex flex-col items-center  ${className}`}>
       <div className=" text-left md:pl-25">
         <div className="w-full md:w-[70%]">
-          <p className=" text-[2.4rem] text-[#b7aaaa]">
+          <p className=" md:text-[2.4rem] text-[#D1533A] font-bold"
+          style={{ fontFamily: '"Italiana", sans-serif' }}>
             Hi, I'm HARSH BARMAN
             <br />
             I'm a front-end developer and designer passionate about creating
@@ -22,9 +24,10 @@ export default function HeroText({ className }) {
           <LearnMore />
         </div>
       </div>
-      <div className="mt-10 w-full ml-auto max-w-[60%] mb-8">
+      <div className="mt-10 w-full ml-auto max-w-[60%] mb-8 font-bold "
+      style={{ fontFamily: '"Italiana", sans-serif' }}>
         <div className=" flex justify-end">
-          <span className=" text-[2rem] text-[#b7aaaa] font-medium md:mr-[36rem]">
+          <span className=" text-[2rem] text-[#D1533A] md:mr-[36rem]">
             EXPERTISES
           </span>
         </div>

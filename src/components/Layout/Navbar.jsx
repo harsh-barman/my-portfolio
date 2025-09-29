@@ -83,7 +83,7 @@ const Navbar = () => {
               About
             </a>
             <a 
-              href="/#contact" 
+              href="#" 
               className="relative text-white text-2xl no-underline transition-colors duration-300 ease-in-out hover:animate-pulse
                 after:content-[''] after:absolute after:left-1/2 after:-bottom-3.5 after:w-1.5 after:h-1.5 
                 after:bg-white after:rounded-full after:-translate-x-1/2 after:scale-0 after:transition-transform after:duration-300

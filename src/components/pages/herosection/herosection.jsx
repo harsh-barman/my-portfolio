@@ -5,7 +5,9 @@ import Lenis from '@studio-freight/lenis';
 import { GoArrowDownRight } from "react-icons/go";
 import CircularText from '../../styles/CircularText/CircularText'
 import HeroText from '../HeroText/HeroText';
-import backgroundImage from '../../../assets/094.png'
+
+import Particles from '../../styles/Particle';
+import { style } from 'motion/react-client';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -52,12 +54,12 @@ const HeroSection = () => {
       },
     });
     gsap.set(middleTextRef.current, {
-      scaleX: 0.7,
-      scaleY: 3,
+      scaleX: 0.9,
+      scaleY: 1.8,
     });
     // Animation for scaling the middle text
     exp.to(middleTextRef.current, {
-      scale: 60,
+      scale: 30,
       transformOrigin: 'center center',
       ease: 'none',
     });
@@ -71,47 +73,54 @@ const HeroSection = () => {
 
   return (
     <div  >
-      <div
-
->
       {/* Hero Section */}
-     <div
-  ref={experienceRef}
-  className="relative w-full h-screen overflow-hidden bg-[#D1533A] "
-  style={{
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
-    // backgroundPosition: "center",
-    backgroundBlendMode: "multiply", // blends color with image
-  }}
->
+      <div ref={experienceRef}
+        className="relative w-full h-screen overflow-hidden  bg-[#F0E0CC] " 
+      >{/*bg-[#D1533A] */}
+
+        <div style={{ width: '100%', height: '100vh' }}>
+          <Particles
+            particleColors={['#D1533A', '#eac394' ]}
+            particleCount={1000}
+            particleSpread={20}
+            speed={0.1}
+            particleBaseSize={300}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
         {/* Centered main content */}
-        <div className=" absolute inset-0  flex flex-col  md:gap-25 gap-8 text-right items-center justify-center w-full ">
+        <div className=" absolute inset-0  flex flex-col  md:gap-25 gap-8 text-right items-center justify-center w-full md:w-6xl h-[150px]
+                   md:h-[470px] bg-[#D1533A] mx-auto my-auto md:rounded-2xl ">
           <h1
             ref={middleTextRef}
-            className="font-black whitespace-nowrap select-none tracking-tight transform origin-center 
-                  font-mulish bg-[#F0E0CC]
-                  bg-[length:300%_300%] bg-clip-text text-transparent animate-waveGradient text-[clamp(3rem,12vw,14rem)]"
+            className="font-black whitespace-nowrap select-none  transform origin-center 
+                  font-mulish 
+                   text-[clamp(2rem,12vw,9rem)]  text-[#eac394] md:pt-15 pt-5"
+                   style={{ fontFamily: '"Boldonse", system-ui' }}
           >
             HARSH BARMAN
           </h1>
           
           {/* Subtitle positioned below h1 */}
-          <div className="flex flex-row  md:justify-end justify-center gap-4 w-full md:pr-57  ">
-            <GoArrowDownRight className="md:text-3xl text-md text-gray-800" />
-            <h2 className="md:text-4xl text-lg  text-gray-800 ">
-              FRONTEND DEVELOPER
+          <div className="flex  md:justify-end justify-center gap-4 w-full md:pr-6  ">
+            <GoArrowDownRight className="md:text-3xl text-md text-[#eac394]" />
+            <h2 className="md:text-4xl text-md  text-[#eac394] font-bold  "
+            style={{ fontFamily: '"Italiana", sans-serif' }}
+            >
+              FRONTEND DEVELOPER AND DESIGNER
             </h2>
           </div>
-          <CircularText
+         
+        </div>
+         <CircularText
             text=" * SCROLL TO DISCOVER * SCROLL TO DISCOVER"
             onHover="speedUp"
             spinDuration={20}
-            className="absolute md:bottom-20 md:left-10 bottom-3 left-3"
+            className="absolute md:bottom-10 md:left-8 bottom-3 left-3"
           />
-        </div>
-      </div>
+      
       </div>
 
       {/* Next section for scroll effect */}
