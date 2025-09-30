@@ -68,6 +68,7 @@ const HeroSection = () => {
     return () => {
       gsap.ticker.remove(updateLenis);
        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+       lenis.destroy();
     };
   }, []);
 
@@ -75,7 +76,7 @@ const HeroSection = () => {
     <div  >
       {/* Hero Section */}
       <div ref={experienceRef}
-        className="relative w-full h-screen overflow-hidden  bg-[#F0E0CC] " 
+        className="relative w-full min-h-screen overflow-hidden  bg-[#F0E0CC] " 
       >{/*bg-[#D1533A] */}
 
         <div style={{ width: '100%', height: '100vh' }}>
@@ -96,7 +97,6 @@ const HeroSection = () => {
           <h1
             ref={middleTextRef}
             className="font-black whitespace-nowrap select-none  transform origin-center 
-                  font-mulish 
                    text-[clamp(2rem,12vw,9rem)]  text-[#eac394] md:pt-15 pt-5"
                    style={{ fontFamily: '"Boldonse", system-ui' }}
           >
@@ -124,7 +124,7 @@ const HeroSection = () => {
       </div>
 
       {/* Next section for scroll effect */}
-      <section className="h-auto w-full  bg-[#1f1f1f]">
+      <section className="h-auto w-full  bg-[#D1533A]">
         <div className=" ">
           < HeroText className ='pt-20'/>
         </div>
